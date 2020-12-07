@@ -1,11 +1,11 @@
 import React from "react";
-import { Platform} from "react-native";
+import { Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import ProfileScreen from "./src/screen/profile"
-import MyCoursesScreen from "./src/screen/my-courses"
-import HomeScreen from "./src/screen/home"
+import ProfileScreen from "./src/screen/profile";
+import MyCoursesScreen from "./src/screen/my-courses";
+import HomeScreen from "./src/screen/home";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,13 +20,12 @@ export default function App() {
             if (route.name === "Home") {
               iconName = "home";
             } else if (route.name === "My Courses") {
-              iconName =  "play-circle";
+              iconName = "play-circle";
             } else if (route.name === "Profile") {
               iconName = "person";
             }
-
-            // You can return any component that you like here!
-            return <Ionicons name={(Platform.OS === "ios" ? "ios" : "md")+"-"+iconName} size={size} color={color} />;
+            iconName = `${Platform.OS === "ios" ? "ios" : "md"}-${iconName}`;
+            return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}
         tabBarOptions={{
