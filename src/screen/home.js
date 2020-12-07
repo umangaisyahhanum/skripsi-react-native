@@ -1,6 +1,6 @@
 import React from "react";
 import { Platform, StyleSheet, Text, View, ScrollView } from "react-native";
-import { Header } from "react-native-elements";
+import { Header, Card } from "react-native-elements";
 import { Ionicons } from "@expo/vector-icons";
 
 const HomeScreen = ({ navigation }) => {
@@ -29,7 +29,36 @@ const HomeScreen = ({ navigation }) => {
         }}
         rightComponent={<RightComponent />}
       />
+      <View style={{ backgroundColor: "white", marginVertical: 10 }}>
+        <Text style={{ fontSize: 20 , paddingLeft:20, paddingVertical:10}}>Data Science Courses</Text>
+        <ScrollView
+          horizontal={true}
+          style={{
+            paddingVertical: 5,
+          }}
+        >
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+        </ScrollView>
+      </View>
     </ScrollView>
+  );
+};
+
+const CourseCard = () => {
+  return (
+    <Card>
+      <Card.Image
+        source={{
+          uri:
+            "https://cdn.searchenginejournal.com/wp-content/uploads/2019/12/when-to-use-data-science-in-seo-5def8e5b1c22c-760x400.png",
+        }}
+        style={{ resizeMode: "contain" }}
+      />
+      <Card.Title>Data Science With Python</Card.Title>
+    </Card>
   );
 };
 
