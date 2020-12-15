@@ -62,4 +62,5 @@ const CourseCard = () => {
   );
 };
 
+
 export default HomeScreen;
