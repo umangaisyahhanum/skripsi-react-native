@@ -3,6 +3,8 @@ import { Platform, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import { Header, SearchBar } from "react-native-elements";
 
+import {MyCourseCard} from "../component/course-card";
+
 const MyCoursesScreen = ({ navigation }) => {
   return (
     <ScrollView>
@@ -14,6 +16,7 @@ const MyCoursesScreen = ({ navigation }) => {
         }}
       />
       <CustomSearchBar />
+      <MyCourseCard/>
     </ScrollView>
   );
 };
