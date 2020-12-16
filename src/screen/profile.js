@@ -7,8 +7,6 @@ import {
   View,
   Image,
 } from "react-native";
-import logo from "../../assets/simplilearn-logo.png";
-
 import { ListItem, Icon } from "react-native-elements";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -17,7 +15,7 @@ const ProfileScreen = ({ navigation }) => {
     <ScrollView>
       <View style={{ backgroundColor: "white", padding: 20, marginBottom: 10 }}>
         <Image
-          source={{ uri: logo }}
+          source={require("../../assets/simplilearn-logo.png")}
           style={{
             justifyContent: "center",
             alignSelf: "center",

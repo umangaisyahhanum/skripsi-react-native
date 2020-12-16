@@ -19,15 +19,13 @@ export const CourseCardHorizontal = () => {
       <View
         style={{
           padding: 15,
-          flex: 1,
-          flexWrap: "wrap",
           width: 200,
         }}
       >
         <View style={{ paddingVertical: 10 }}>
           <Text style={{ color: "gray" }}>DATA SCIENCE</Text>
         </View>
-        <Text style={{ fontSize: 20 }}>Data Science with Python</Text>
+        <Text style={{ fontSize: 20, flexWrap: "wrap"}}>Data Science with Python</Text>
         <View style={{ flexDirection: "row", paddingVertical: 10 }}>
           <Text style={{ color: "gray" }}>4.3</Text>
           <Ionicons
@@ -66,15 +64,14 @@ export const CourseCardVertical = () => {
           style={{
             flexDirection: "column",
             width: "75%",
-            flex: 1,
             paddingHorizontal: 10,
-            flexWrap: "wrap",
           }}
         >
           <Text style={{ color: "gray", paddingBottom: 10 }}>
             CYBER SECURITY
           </Text>
-          <Text style={{ fontSize: 20 }}>Introduction to Cyber Security </Text>
+          <Text style={{ fontSize: 20,
+            flexWrap: "wrap"}}>Introduction to Cyber Security </Text>
           <View style={{ flexDirection: "row", paddingVertical: 10 }}>
             <Text style={{ color: "gray" }}>4.3</Text>
             <Ionicons
@@ -114,16 +111,14 @@ export const MyCourseCard = () => {
           style={{
             flexDirection: "column",
             width: "75%",
-            flex: 1,
             paddingHorizontal: 10,
-            flexWrap: "wrap",
             paddingBottom: 10
           }}
         >
           <Text style={{ color: "gray", paddingBottom: 10 }}>
             CYBER SECURITY
           </Text>
-          <Text style={{ fontSize: 20 }}>Introduction to Cyber Security </Text>
+          <Text style={{ fontSize: 20 , flexWrap: "wrap",}}>Introduction to Cyber Security </Text>
           <View style={{paddingVertical:10}}>
             <ProgressBar progress={0.3} color= {Colors.green500}/>
           </View>
